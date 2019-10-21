@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint XAutoLayoutKit.podspec' to ensure this is a
+#  Be sure to run `pod spec lint TinyConsole.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "TinyConsole."
 
   s.description  = <<-DESC
-                   A longer description of XAutoLayoutKit in Markdown format.
+                   A longer description of TinyConsole in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
