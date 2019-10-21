@@ -50,13 +50,25 @@ class TinyConsoleViewController: UIViewController {
     private func setupConstraints() {
         consoleTextView.translatesAutoresizingMaskIntoConstraints = false
         consoleTextView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        consoleTextView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: consoleTextView.rightAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            consoleTextView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 11.0, *) {
+            view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: consoleTextView.rightAnchor).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
         view.bottomAnchor.constraint(equalTo: consoleTextView.bottomAnchor).isActive = true
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 8).isActive = true
-        view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 8).isActive = true
+        if #available(iOS 11.0, *) {
+            view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 8).isActive = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     @objc func customText(sender: AnyObject) {
